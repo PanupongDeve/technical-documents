@@ -1,0 +1,1 @@
+https://github.com/PanupongDeve/docker-startup-loki-plugin

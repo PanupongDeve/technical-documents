@@ -1,0 +1,1 @@
+cat <server cert.pem><Intermediate ca.pem><rootca.pem>   > bundle-cert.(pem, crt, cert)
