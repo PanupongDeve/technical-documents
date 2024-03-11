@@ -3,7 +3,7 @@ install
 https://minikube.sigs.k8s.io/docs/start/
 
 start
-sudo minikube start  --force
+minikube start  --force
 
 generate dashbord
 minikube dashboard
