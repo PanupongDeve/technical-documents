@@ -1,0 +1,1 @@
+nmap --script ssl-enum-ciphers -p <port> <ip or domain> -Pn
