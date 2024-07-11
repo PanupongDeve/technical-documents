@@ -4,6 +4,10 @@ https://minikube.sigs.k8s.io/docs/start/
 
 ## start
 minikube start  --force
+minikube start --nodes 3
+
+minikube node add <number>
+(for exist minikube)
 
 ## generate dashbord
 minikube dashboard
@@ -71,3 +75,49 @@ sudo apt-get install -y kubectl
 # install kubectx
 
 brew install kubectx
+
+# add lens k8s
+dir C:\Users\Asus\AppData\Roaming\Lens\kubeconfigs
+
+create folder minikube
+create ca.crt client.crt client.key in folder minikube  from ~/.kube/config
+
+add cluster config
+
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Thu, 11 Jul 2024 13:12:41 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.32.0
+      name: cluster_info
+    server: https://localhost:8543
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Thu, 11 Jul 2024 13:12:41 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.32.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /minikube/client.crt
+    client-key: /minikube/client.key
+
+
+tunnel
+
+ssh -L 8543:192.168.49.2:8443 panupongdeve
