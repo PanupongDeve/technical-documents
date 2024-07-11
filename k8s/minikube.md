@@ -62,3 +62,12 @@ sudo apt-get update
 sudo apt-get install -y kubectl
 
 -----------------------------
+
+## install plugin kubectx
+
+# install https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install kubectx
+
+brew install kubectx
