@@ -1,16 +1,34 @@
-install 
+## install 
 
 https://minikube.sigs.k8s.io/docs/start/
 
-start
+## start
 minikube start  --force
 
-generate dashbord
+## generate dashbord
 minikube dashboard
 
-add ingress
-minikube addons enable ingress
+## add ingress
+minikube addons enable ingress  
 
+## access ingress
+
+minikube ip
+
+ssh -L 8040:<minikube-ip>:80 -L 8043:<minikube-ip>:443  <minikube host>
+ssh -L 8040:192.168.49.2:80 -L 8043:192.168.49.2:443  panupongdeve
+
+http --> localhost:8040
+https --> https://localhost:8043
+
+## change host windows
+
+1. In the search results, right-click Notepad and select Run as
+administrator.
+2. c:\Windows\System32\Drivers\etc\hosts
+
+## change host windows
+1. sudo vim /etc/hosts
 
 
 install kubectl
