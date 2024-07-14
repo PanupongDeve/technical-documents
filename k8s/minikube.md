@@ -35,6 +35,9 @@ administrator.
 1. sudo vim /etc/hosts
 
 
+## add metrics server
+minikube addons enable metrics-server
+
 install kubectl
 
 ----- curl ------------------
