@@ -124,3 +124,7 @@ users:
 tunnel
 
 ssh -L 8543:192.168.49.2:8443 panupongdeve
+
+# storage class
+minikube addons enable volumesnapshots
+minikube addons enable csi-hostpath-driver
